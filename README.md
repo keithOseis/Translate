@@ -20,6 +20,7 @@ git clone https://github.com/keithOseis/Translate
 - docker run -d -p 3000:3000 -v node:/code translate
 ### Test API
   REST: GET
+  
   Values:
    - "word": "Have an nice day"
    - "source": "en"
