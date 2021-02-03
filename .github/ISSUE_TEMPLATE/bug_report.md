@@ -7,13 +7,17 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+###Describe the bug
+[A clear and concise description of what the bug is.]
+### Steps to Reproduce
+1. [First Step]
+2. [Second Step]
+3. [and so on...]
 
-**checklist**
-* [ ] Can you reproduce the problem
+###checklist
+[ ] Can you reproduce the problem
 
-**Error Code**
-if error Code
+###Error Code
+[error Code]
 
 ** Screenshosts
