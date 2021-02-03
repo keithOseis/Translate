@@ -5,27 +5,32 @@ app.use(express.json());
 require('dotenv').config();
 
 
-router.get('/translate', (req, res, next) =>{
-   const source = req.body.source;
-   const target = req.body.target;
-   const word = req.body.word;
-   var spawn = require('child_process').spawn,child;
-   child = spawn("trans ", source + ":" +target + " --brief " + word);
-   child .stdout.on("data", function(data){
-       var success = data;
-       res.send(success);
-   });
-   child.stderr.on("data",function(data){
-       var success = data;
-       res.send(success);
-   });
-   child.on("exit",function(){
-       var success = data;
-       res.send(success);
-   });
-   child.stdin.end(); //end input
+router.get('/translate', (req, res) =>{
+   let src_lang = req.body.source;
+   let tar_lang = req.body.target;
+   let query_word = req.body.word;
+   let command = 'trans '+ src_lang + ':' + tar_lang + ' "' + query_word + '" --brief'
+   
+  exec(command, (error, stdout, stderr) => {
+   if (error) {
+     console.log(`error: ${error.message}`);
+     res.send('NIO');
+     return;
+     }
+   if (stderr) {
+     console.log(`stderr: ${stderr}`);
+     res.send('NIO');
+     return;
+     }
+     console.log(`stdout: ${stdout}`);
+     //console.log(command);
+     var lang ={
+      tranlation: stdout
+     }
+     res.send(lang);
 
 });
 
+});
 
 module.exports = router;
