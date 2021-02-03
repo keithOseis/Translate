@@ -1,0 +1,22 @@
+{
+  "name": "translate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keithOseis/Translate"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "*",
+    "child_process": "*",
+    "dotenv": "*",
+    "express": "*",
+    "util": "*"
+  }
+}
