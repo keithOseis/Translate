@@ -6,5 +6,6 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/keithoseis/translate?style=for-the-badge)
 ###
 Downloads
+
 ![GitHub all releases](https://img.shields.io/github/downloads/keithoseis/translate/total?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/keithoseis/translate?style=for-the-badge)
