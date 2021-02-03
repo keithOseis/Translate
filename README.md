@@ -15,9 +15,9 @@
 ## How it works
 git clone https://github.com/keithOseis/Translate
 ### Build Docker Container
-docker create volume node
-docker build -t translate .
-docker run -d -p 3000:3000 -v node:/code translate
+- docker create volume node
+- docker build -t translate .
+- docker run -d -p 3000:3000 -v node:/code translate
 ### Test API
   REST: GET
   Values:
