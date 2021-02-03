@@ -21,9 +21,9 @@ docker run -d -p 3000:3000 -v node:/code translate
 ### Test API
   REST: GET
   Values:
-    "word": "Have an nice day"
-    "source": "en"
-    "target": "pl"
+   - "word": "Have an nice day"
+   - "source": "en"
+   - "target": "pl"
 
 ### Planned feature
 Swagger UI
