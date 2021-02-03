@@ -19,15 +19,11 @@ docker create volume node
 docker build -t translate .
 docker run -d -p 3000:3000 -v node:/code translate
 ### Test API
-powershell
-$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
-$headers.Add("Content-Type", "application/json")
+  REST: GET
+  Values:
+    "word": "Have an nice day"
+    "source": "en"
+    "target": "pl"
 
-$body = "{
-`n  `"word`": `"Ask a question`",
-`n  `"source`": `"en`",
-`n  `"target`": `"cs`"
-`n}"
-
-$response = Invoke-RestMethod 'http://localhost:3000/api/translate' -Method 'GET' -Headers $headers -Body $body
-$response | ConvertTo-Json
+### Planned feature
+Swagger UI
