@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 app.use(express.json());
 require('dotenv').config();
-
+const{ exec } = require('child_process');
 
 router.get('/translate', (req, res) =>{
    let src_lang = req.body.source;
