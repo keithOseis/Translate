@@ -11,6 +11,9 @@
 
 ![GitHub all releases](https://img.shields.io/github/downloads/keithoseis/translate/total?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/keithoseis/translate?style=for-the-badge)
+### License
+
+![GitHub](https://img.shields.io/github/license/keithoseis/translate?style=for-the-badge)
 ---
 ## How it works
 git clone https://github.com/keithOseis/Translate
@@ -21,10 +24,18 @@ git clone https://github.com/keithOseis/Translate
 ### Test API
   REST: GET
   
+  Headers:
+   - content-type: application/json  
+
   Values:
-   - "word": "Have an nice day"
+   - "word": "Have a nice day"
    - "source": "en"
    - "target": "pl"
 
 ### Planned feature
-Swagger UI
+ - Swagger UI
+ - Disable Console Output
+ - Authentication (via JWT)
+
+
+

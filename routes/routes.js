@@ -27,6 +27,7 @@ router.get('/translate', (req, res) =>{
      var lang ={
       tranlation: stdout
      }
+     res.status(200);
      res.send(lang);
 
 });

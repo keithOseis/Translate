@@ -8,9 +8,7 @@ WORKDIR /code
 
 RUN mkdir routes
 
-COPY app.js app.js
-COPY package.json package.json
-COPY routes/routes.js routes/routes.js
+ADD . /code
 
 RUN npm install
 RUN npm install -g nodemon
