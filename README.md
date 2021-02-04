@@ -17,13 +17,25 @@
 ---
 ## How it works
 git clone https://github.com/keithOseis/Translate
-### Build Docker Container
+### Docker 
+#### Build Docker Container
 - docker create volume node
 - docker build -t translate .
 - docker run -d -p 3000:3000 -v node:/code translate
+
+### Envoirment Variables
+#### Required for SwaggerUI
+- APIURI 
+- APIPORT
+#### Required for JWT
+- TOKEN_EXPIRE // in seconds
+- ACCESS_TOKEN_SECRET
+- TOKEN_SECRET_PASSWORD
+- TOKEN_SECRET_USER
+
 ### Test API
   REST: GET
-  
+
   Headers:
    - content-type: application/json  
 
@@ -32,10 +44,13 @@ git clone https://github.com/keithOseis/Translate
    - "source": "en"
    - "target": "pl"
 
+
+
 ### Planned feature
  - Swagger UI
+   - Version 1.0.5
  - Disable Console Output
- - Authentication (via JWT)
-
+ - JWT
+   - Version 1.0.3a
 
 

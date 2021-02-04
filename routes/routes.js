@@ -5,7 +5,9 @@ app.use(express.json());
 require('dotenv').config();
 const{ exec } = require('child_process');
 
-router.get('/translate', (req, res) =>{
+const secretkey = process.env.ACCESS_TOKEN_SECRET || '11321465798231165';
+
+router.get('/translate', authenticateToken, (req, res) =>{
    let src_lang = req.body.source;
    let tar_lang = req.body.target;
    let query_word = req.body.word;
@@ -34,4 +36,18 @@ router.get('/translate', (req, res) =>{
 
 });
 
+
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization']
+  const token = authHeader && authHeader.split(' ')[1]
+  if (token == null) return res.sendStatus(401)
+  jwt.verify(token, secretkey, (err, user) => {
+    console.log(err)
+    if (err) return res.sendStatus(403)
+    req.user = user
+    next()
+  })
+}
+
 module.exports = router;
+
