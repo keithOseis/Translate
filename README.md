@@ -51,6 +51,6 @@ git clone https://github.com/keithOseis/Translate
    - Version 1.0.5
  - Disable Console Output
  - JWT
-   - Version 1.0.3a
+   - Version 1.0.4
 
 
