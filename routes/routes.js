@@ -3,6 +3,7 @@ const app = express();
 const router = express.Router();
 app.use(express.json());
 require('dotenv').config();
+const jwt = require('jsonwebtoken');
 const{ exec } = require('child_process');
 
 const secretkey = process.env.ACCESS_TOKEN_SECRET || '11321465798231165';
@@ -35,7 +36,6 @@ router.get('/translate', authenticateToken, (req, res) =>{
 });
 
 });
-
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization']

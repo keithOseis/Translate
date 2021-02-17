@@ -17,6 +17,9 @@
     "child_process": "*",
     "dotenv": "*",
     "express": "*",
+    "jsonwebtoken": "*",
+    "swagger-ui-express": "*",
+    "swagger-jsdoc": "*",
     "util": "*"
   }
 }

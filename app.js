@@ -9,8 +9,9 @@ app.use(bodyParser.json());
 
 const http = require('http');
 const apiRoutes  = require('./routes/routes');
+const tokenRoutes = require('./routes/token');
 app.use('/api' , apiRoutes);
-
+app.use('/token' , tokenRoutes);
 
 
 
